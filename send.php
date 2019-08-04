@@ -30,5 +30,5 @@ if (!empty($_POST['telephone'])) {
 $message_content = $message_content . '</tr></table>';
 mail($to, $subject, $message_content, $headers);
 echo '<script>alert("Votre message a bien été envoyé");</script>';
-header('Location: contact.php');
+header('Location: index.html');
 
