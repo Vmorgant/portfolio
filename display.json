@@ -1,0 +1,32 @@
+{
+  "fr": {
+    "presentation": "Presentation",
+    "project": "Mes projets",
+    "contact": "Me contacter",
+    "age": "26 ans",
+    "job": "Etudiant Ingénieur en informatique",
+    "ensim": "Ingénieur Informatique Spécialité Interactions Personnes Systèmes",
+    "master": "Master Management des Entreprises et des Administrations",
+    "lastname": "Nom",
+    "firstname": "Prenom",
+    "phone": "Numero de téléphone",
+    "title": "Titre",
+    "send": "Envoyer",
+    "year": "Année"
+  },
+  "en": {
+    "presentation": "Presentation",
+    "project": "My Project",
+    "contact": "Contact Me",
+    "age": "26 years old",
+    "job": "Computer Engineer Student",
+    "ensim": "Computer Engineer specialized in Human Computer Interaction",
+    "master": "Master of Business and Administration Management",
+    "lastname": "Last Name",
+    "firstname": "First Name",
+    "phone": "Phone number",
+    "title": "Title",
+    "send": "Send",
+    "year": "Year"
+  }
+}

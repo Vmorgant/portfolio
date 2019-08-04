@@ -1,0 +1,195 @@
+<!--suppress ALL -->
+<html lang="fr">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1.0" name="viewport"/>
+    <title>Victor MORGANT</title>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="sass/materialize.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet">
+    <script src="js/bin/materialize.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        function generateCard(project, lang) {
+            let desc;
+            let type;
+            let status;
+            if (lang === 'en') {
+                desc = project.en.description;
+                type = project.en.type;
+                status = project.en.status;
+            } else {
+                desc = project.fr.description;
+                type = project.fr.type;
+                status = project.fr.status;
+            }
+            return '<div class="col s4">\n' +
+                '<div class="card large">' +
+                '<div class="card-title">' + project.name + '</div>' +
+                '<div class="card-image waves-effect waves-block waves-ligh">' +
+                '<img class="activator" src="' + project.img + '">' +
+                '</div>' + '' +
+                '<div class="card-reveal">' +
+                '<span class="card-title grey-text text-darken-4">' + project.name + '<i class="material-icons right">close</i></span>' +
+                '<p class="text" key="Description">' + desc + '</p>' +
+                '<p class="text" key="year">Année : ' + project.year + '</p>' +
+                '<p>Technologies :' + project.techno + '</p>' +
+                '<p>Type : ' + type + '</p>' +
+                '<p class="text" key="status">Statut : ' + status + '</p>' +
+                '<p>Lien : ' + project.lien + '</p>' +
+                '</div>'
+        }
+
+        function listProject(lang) {
+            let projectSection = document.getElementById('projet');
+            projectSection.innerHTML = "";
+            fetch("project.json")
+                .then(response => response.json()).then(projects => {
+                    for (project in projects.projects) {
+                        let newContent = generateCard(projects.projects[project], lang);
+                        console.log(newContent);
+                        let newNode = document.createElement("div");
+                        newNode.innerHTML = newContent;
+                        projectSection.appendChild(newNode);
+                    }
+                }
+            );
+        }
+
+        $(function () {
+            listProject('fr');
+            fetch("display.json")
+                .then(response => response.json()).then(display =>
+                $('.translate').click(function () {
+                    let lang = $(this).attr('id');
+                    listProject(lang);
+                    $('.text').each(function (index, item) {
+                        $(this).text(display[lang][$(this).attr('key')]);
+                    });
+                })
+            )
+        });
+    </script>
+</head>
+
+<nav role="navigation">
+
+    <ul class="right hide-on-med-and-down">
+        <li><a class="text" href="#" key="presentation" title="presentation">Présentation</a>
+        </li>
+        <li><a class="text" href="#projet" key="project" title="projet">Mes Projets</a>
+        </li>
+        <li><a class="text" href="#contact" key="contact" title="contact">Me contacter</a>
+        </li>
+    </ul>
+    <button class="translate" id="fr">Français</button>
+    <button class="translate" id="en">English</button>
+    <ul class="sidenav" id="nav-mobile">
+        <li><a href="#">Navbar Link</a></li>
+    </ul>
+    <a class="sidenav-trigger" data-target="nav-mobile" href="#"><i class="material-icons">menu</i></a>
+</nav>
+<body>
+<main>
+    <section class="row" id="presentation">
+        <div class="col s4 offset-s4 ">
+            <div class="card horizontal brown lighten-1">
+                <div class="card-image ">
+                    <img src="img/profile.JPG">
+                </div>
+                <div class="card-content ">
+                    <p class="text" key="age">26 ans</p>
+                    <p class="text" key="job">Etudiant Ingénieur en informatique</p>
+                </div>
+                <div class="card-action">
+                    <a href="https://www.linkedin.com/in/victor-morgant/"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://github.com/Vmorgant/"><i class="fab fa-github-square fa-2x"></i></a>
+                    <a href=""><i class="fab fa-github-square fa-2x"></i></a>
+                    <a href=""><i class="fab fa-github-square fa-2x"></i></a>
+                    <a href=""><i class="fab fa-github-square fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pair-section">
+        <div class="row" id="projet"></div>
+
+    </section>
+    <section class="row" id="diplomes">
+        <div class="col s4 ">
+            <p class="text" key="ensim">Ingénieur Informatique Spécialité Interactions Personnes Systèmes</p>
+            <p>2020</p>
+            <a href="http://ensim.univ-lemans.fr">ENSIM</a>
+        </div>
+        <div class="col s4 ">
+            <p class="text" key="master">Master Management des Entreprises et des Administrations</p>
+            <p>2020</p>
+            <a href="http://www.univ-lemans.fr">Le Mans Université</a>
+        </div>
+        <div class="col s4 ">
+            <p>TOEIC Listening and Reading</p>
+            <p>2019</p>
+            <p>850 (C1)</p>
+        </div>
+    </section>
+    <section class="pair-section" id="contact">
+        <div class="col s12">
+            <form action="send.php" method="POST">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input class="validate" id="nom" name="nom" required type="text">
+                    <label class="text" for="nom" key="lastname">Nom</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">person</i>
+                    <input class="validate" id="prenom" name="prenom" required type="text">
+                    <label class="text" for="prenom" key="firstname">Prenom</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">email</i>
+                    <input class="validate" id="email" name="email" required type="email">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">phone</i>
+                    <input class="validate" id="telephone" name="telephone" type="tel">
+                    <label class="text" for="telephone" key="phone">Numero de téléphone</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">title</i>
+                    <input class="validate" id="titre" name="titre" required type="text">
+                    <label class="text" for="titre" key="title">Titre</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <textarea class="materialize-textarea" id="message" name="message" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <div class="center-align">
+                    <button class="btn waves-effect waves-button-input" class="text" key="send" type="submit">Envoyer
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                '
+                <?php
+                        if (isset($_POST["submit"])){
+                            echo "Votre message a bien été envoyé";
+                        }
+                        ?>
+            </form>
+        </div>
+    </section>
+
+</main>
+<footer class="page-footer">
+    <div class="footer-copyright">
+        <div class="right-align">
+            Victor Morgant 2019
+        </div>
+    </div>
+</footer>
+</body>
+</html>

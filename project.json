@@ -1,0 +1,38 @@
+{
+  "projects": [
+    {
+      "name": "Tactics Arena",
+      "img": "",
+      "year": 2015,
+      "techno": "C, SDL",
+      "links": "",
+      "fr": {
+        "description": "toto",
+        "type": "Projet scolaire",
+        "status": "Terminé"
+      },
+      "en": {
+        "description": "tutu",
+        "type": "School project",
+        "status": "Finished"
+      }
+    },
+    {
+      "name": "BDLC",
+      "img": "",
+      "year": 2015,
+      "techno": "C, SDL",
+      "links": "",
+      "fr": {
+        "description": "toto",
+        "type": "Projet scolaire",
+        "status": "Terminé"
+      },
+      "en": {
+        "description": "toto",
+        "type": "School project",
+        "status": "Finished"
+      }
+    }
+  ]
+}
