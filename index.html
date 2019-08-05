@@ -50,7 +50,6 @@
                 .then(response => response.json()).then(projects => {
                     for (project in projects.projects) {
                         let newContent = generateCard(projects.projects[project], lang);
-                        console.log(newContent);
                         let newNode = document.createElement("div");
                         newNode.innerHTML = newContent;
                         projectSection.appendChild(newNode);
@@ -64,7 +63,17 @@
             fetch("display.json")
                 .then(response => response.json()).then(display =>
                 $('.translate').click(function () {
-                    let lang = $(this).attr('id');
+                    var $this = $(this);
+                    let lang;
+                    $this.toggleClass('translate');
+                    if ($this.hasClass('translate')) {
+                        $this.text('English');
+                        lang = 'en';
+                    } else {
+                        $this.text('Français');
+                        lang = 'fr';
+                    }
+                    console.log(lang);
                     listProject(lang);
                     $('.text').each(function (index, item) {
                         $(this).text(display[lang][$(this).attr('key')]);
@@ -85,31 +94,29 @@
         <li><a class="text" href="#contact" key="contact" title="contact">Me contacter</a>
         </li>
     </ul>
-    <button class="translate" id="fr">Français</button>
-    <button class="translate" id="en">English</button>
+    <button class="translate waves-effect waves-light btn-small" id="fr">Français</button>
+
     <ul class="sidenav" id="nav-mobile">
         <li><a href="#">Navbar Link</a></li>
     </ul>
-    <a class="sidenav-trigger" data-target="nav-mobile" href="#"><i class="material-icons">menu</i></a>
+    <a class="sidenav-trigger right" data-target="nav-mobile" href="#"><i class="material-icons">menu</i></a>
 </nav>
 <body>
 <main>
-    <section class="row" id="presentation" style=" display: flex">
-        <div class="col s4 offset-s4 ">
-            <div class="card horizontal brown lighten-1">
-                <div class="card-image ">
+    <section class="row" id="presentation">
+        <div class="col s5 offset-s4 ">
+            <div class="card horizontal blue-grey">
+                <div class="card-image fixed ">
                     <img src="img/profile.JPG">
                 </div>
                 <div class="card-content ">
                     <p class="text" key="age">26 ans</p>
-                    <p class="text" key="job">Etudiant Ingénieur en informatique</p>
+                    <span class="text" key="job">Etudiant Ingénieur en informatique</span>
                 </div>
-                <div class="card-action">
-                    <a href="https://www.linkedin.com/in/victor-morgant/"><i class="fab fa-linkedin fa-2x"></i></a>
-                    <a href="https://github.com/Vmorgant/"><i class="fab fa-github-square fa-2x"></i></a>
-                    <a href=""><i class="fab fa-github-square fa-2x"></i></a>
-                    <a href=""><i class="fab fa-github-square fa-2x"></i></a>
-                    <a href=""><i class="fab fa-github-square fa-2x"></i></a>
+                <div class="card-action ">
+                    <a href="https://www.linkedin.com/in/victor-morgant/"><i
+                            class="fab fa-linkedin fa-2x white-text"></i></a>
+                    <a href="https://github.com/Vmorgant/"><i class="fab fa-github-square fa-2x white-text"></i></a>
                 </div>
             </div>
         </div>
@@ -139,32 +146,32 @@
         <div class="col s12">
             <form action="send.php" method="POST" onsubmit="alert('Votre Message a bien été envoyé')">
                 <div class="input-field col s6">
-                    <i class="material-icons prefix">account_circle</i>
+                    <i class="material-icons prefix white-text">account_circle</i>
                     <input class="validate" id="nom" name="nom" required type="text">
                     <label class="text" for="nom" key="lastname">Nom</label>
                 </div>
                 <div class="input-field col s6">
-                    <i class="material-icons prefix">person</i>
+                    <i class="material-icons prefix white-text">person</i>
                     <input class="validate" id="prenom" name="prenom" required type="text">
                     <label class="text" for="prenom" key="firstname">Prenom</label>
                 </div>
                 <div class="input-field col s6">
-                    <i class="material-icons prefix">email</i>
+                    <i class="material-icons prefix white-text">email</i>
                     <input class="validate" id="email" name="email" required type="email">
                     <label for="email">Email</label>
                 </div>
                 <div class="input-field col s6">
-                    <i class="material-icons prefix">phone</i>
+                    <i class="material-icons prefix white-text">phone</i>
                     <input class="validate" id="telephone" name="telephone" type="tel">
                     <label class="text" for="telephone" key="phone">Numero de téléphone</label>
                 </div>
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">title</i>
+                    <i class="material-icons prefix white-text">title</i>
                     <input class="validate" id="titre" name="titre" required type="text">
                     <label class="text" for="titre" key="title">Titre</label>
                 </div>
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">mode_edit</i>
+                    <i class="material-icons prefix white-text">mode_edit</i>
                     <textarea class="materialize-textarea" id="message" name="message" required></textarea>
                     <label for="message">Message</label>
                 </div>

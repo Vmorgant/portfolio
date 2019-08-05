@@ -8,7 +8,6 @@
 
 body {
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
 }
 
@@ -22,4 +21,17 @@ main {
 
 a {
     color: black;
+}
+
+#presentation {
+    margin-top: 3vh;
+}
+
+.card-content {
+    white-space: nowrap;
+    margin: auto;
+}
+
+.card-image {
+    height: auto;
 }
