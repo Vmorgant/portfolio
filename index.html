@@ -26,20 +26,20 @@
                 type = project.fr.type;
                 status = project.fr.status;
             }
-            return '<div class="col s4">\n' +
+            return '<div class="col s4">' +
                 '<div class="card large">' +
-                '<div class="card-title">' + project.name + '</div>' +
+                '<div class="card-title center">' + project.name + '</div>' +
                 '<div class="card-image waves-effect waves-block waves-ligh">' +
-                '<img class="activator" src="' + project.img + '">' +
+                '<img class="activator responsive-img" src="' + project.img + '" alt="' + project.name + '">' +
                 '</div>' + '' +
                 '<div class="card-reveal">' +
-                '<span class="card-title grey-text text-darken-4">' + project.name + '<i class="material-icons right">close</i></span>' +
+                '<span class="card-title grey-text text-darken-4 center">' + project.name + '<i class="material-icons right">close</i></span>' +
                 '<p class="text" key="Description">' + desc + '</p>' +
-                '<p class="text" key="year">Année : ' + project.year + '</p>' +
-                '<p>Technologies :' + project.techno + '</p>' +
-                '<p>Type : ' + type + '</p>' +
-                '<p class="text" key="status">Statut : ' + status + '</p>' +
-                '<p>Lien : ' + project.lien + '</p>' +
+                '<p class="text" key="year"><i class="material-icons prefix blue-grey-text">date_range</i> Année : ' + project.year + '</p>' +
+                '<p><i class="material-icons prefix blue-grey-text">computer</i> Technologies : ' + project.techno + '</p>' +
+                '<p><i class="material-icons prefix blue-grey-text">flag</i> Type : ' + type + '</p>' +
+                '<p class="text" key="status"><i class="material-icons prefix blue-grey-text">assignment</i> Statut : ' + status + '</p>' +
+                '<a href="' + project.links + '"><i class="material-icons prefix blue-grey-text">link</i></a>' +
                 '</div>'
         }
 
@@ -107,7 +107,7 @@
         <div class="col s5 offset-s4 ">
             <div class="card horizontal blue-grey">
                 <div class="card-image fixed ">
-                    <img src="img/profile.JPG">
+                    <img class="responsive-img" src="img/profile.JPG">
                 </div>
                 <div class="card-content ">
                     <p class="text" key="age">26 ans</p>
