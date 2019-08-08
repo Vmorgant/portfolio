@@ -26,12 +26,11 @@
                 type = project.fr.type;
                 status = project.fr.status;
             }
-            return '<div class="col s4">' +
-                '<div class="card large">' +
+            return '<div class="card medium hoverable">'+
                 '<div class="card-title center">' + project.name + '</div>' +
                 '<div class="card-image waves-effect waves-block waves-ligh">' +
-                '<img class="activator responsive-img" src="' + project.img + '" alt="' + project.name + '">' +
-                '</div>' + '' +
+                '<img class="activator responsive-img" src="' + project.img + '" alt="' + project.name + '">'+
+                '</div>' +
                 '<div class="card-reveal">' +
                 '<span class="card-title grey-text text-darken-4 center">' + project.name + '<i class="material-icons right">close</i></span>' +
                 '<p class="text" key="Description">' + desc + '</p>' +
@@ -51,6 +50,7 @@
                     for (project in projects.projects) {
                         let newContent = generateCard(projects.projects[project], lang);
                         let newNode = document.createElement("div");
+                        newNode.className="col s4 ";
                         newNode.innerHTML = newContent;
                         projectSection.appendChild(newNode);
                     }
@@ -67,13 +67,12 @@
                     let lang;
                     $this.toggleClass('translate');
                     if ($this.hasClass('translate')) {
-                        $this.text('English');
-                        lang = 'en';
-                    } else {
                         $this.text('Français');
                         lang = 'fr';
+                    } else {
+                        $this.text('English');
+                        lang = 'en';
                     }
-                    console.log(lang);
                     listProject(lang);
                     $('.text').each(function (index, item) {
                         $(this).text(display[lang][$(this).attr('key')]);
@@ -84,18 +83,19 @@
     </script>
 </head>
 
-<nav role="navigation">
+<nav role="navigation" class="sticky-nav">
 
-    <ul class="right hide-on-med-and-down">
-        <li><a class="text" href="#" key="presentation" title="presentation">Présentation</a>
+    <ul class="right "> <!--hide-on-med-and-down-->
+        <li id="menu_item-1" ><a class="text" href="#" key="presentation" >Présentation</a>
         </li>
-        <li><a class="text" href="#projet" key="project" title="projet">Mes Projets</a>
+        <li id="menu_item-2" ><a class="text"  href="#project-section" key="project" >Mes Projets</a>
         </li>
-        <li><a class="text" href="#contact" key="contact" title="contact">Me contacter</a>
+        <li id="menu_item-3" ><a class="text" href="#diplomes-section" key="diplomes" >Mes diplômes</a>
+        </li>
+        <li id="menu_item-4" ><a class="text" href="#contact-section" key="contact">Me contacter</a>
         </li>
     </ul>
     <button class="translate waves-effect waves-light btn-small" id="fr">Français</button>
-
     <ul class="sidenav" id="nav-mobile">
         <li><a href="#">Navbar Link</a></li>
     </ul>
@@ -103,7 +103,7 @@
 </nav>
 <body>
 <main>
-    <section class="row" id="presentation">
+    <section class="row " id="presentation-section">
         <div class="col s5 offset-s4 ">
             <div class="card horizontal blue-grey">
                 <div class="card-image fixed ">
@@ -120,29 +120,33 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="pair-section">
-        <div class="row" id="projet"></div>
+    </section >
+
+    <section class="pair-section" >
+        <h1 id="project-section" class="text"  key="project"> Mes projets</h1>
+        <div class="row " id="projet"></div>
 
     </section>
-    <section class="row" id="diplomes">
+    <section class="row " >
+        <h1 id="diplomes-section" class="text"  key="diplomes"> Mes diplomes</h1>
         <div class="col s4 ">
-            <p class="text" key="ensim">Ingénieur Informatique Spécialité Interactions Personnes Systèmes</p>
-            <p>2020</p>
-            <a href="http://ensim.univ-lemans.fr">ENSIM</a>
+            <p><i class="material-icons">book</i><span class="text" key="master">Ingénieur Informatique Spécialité Interactions Personnes Systèmes</span></p>
+            <p><i class="material-icons">calendar_today</i>2020</p>
+            <p><i class="material-icons">location_on</i><a href="http://ensim.univ-lemans.fr">ENSIM</a></p>
         </div>
         <div class="col s4 ">
-            <p class="text" key="master">Master Management des Entreprises et des Administrations</p>
-            <p>2020</p>
-            <a href="http://www.univ-lemans.fr">Le Mans Université</a>
+            <p ><i class="material-icons">book</i><span class="text" key="master">Master Management des Entreprises et des Administrations</span></p>
+            <p><i class="material-icons">calendar_today</i>2020</p>
+            <p><i class="material-icons">location_on</i><a href="http://www.univ-lemans.fr">Le Mans Université</a></p>
         </div>
         <div class="col s4 ">
-            <p>TOEIC Listening and Reading</p>
-            <p>2019</p>
-            <p>850 (C1)</p>
+            <p><i class="material-icons">book</i>TOEIC Listening and Reading</p>
+            <p><i class="material-icons">calendar_today</i>2019</p>
+            <p><i class="material-icons">assessment</i>850 (C1)</p>
         </div>
     </section>
-    <section class="pair-section" id="contact">
+    <section class="pair-section " >
+        <h1 id="contact-section" class="text"  key="contact"> Me contacter</h1>
         <div class="col s12">
             <form action="send.php" method="POST" onsubmit="alert('Votre Message a bien été envoyé')">
                 <div class="input-field col s6">
@@ -187,7 +191,7 @@
 </main>
 <footer class="page-footer">
     <div class="footer-copyright">
-        <div class="right-align">
+        <div class="center-block">
             Victor Morgant 2019
         </div>
     </div>

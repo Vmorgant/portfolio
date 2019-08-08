@@ -9,8 +9,17 @@
 body {
     display: flex;
     flex-direction: column;
+    margin-top: 100px;
 }
-
+.sticky-nav{
+    position: fixed;
+    z-index: 10;
+    top :0;
+}
+h1{
+    text-align: center;
+    color: #6d4c41;
+}
 main {
     flex: 1 0 auto;
 }
@@ -23,15 +32,10 @@ a {
     color: black;
 }
 
-#presentation {
-    margin-top: 3vh;
-}
-
 .card-content {
     white-space: nowrap;
     margin: auto;
 }
-
-.card-image {
-    height: auto;
+.card s3{
+    margin: auto;
 }

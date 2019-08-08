@@ -12,7 +12,8 @@
     "phone": "Numero de téléphone",
     "title": "Titre",
     "send": "Envoyer",
-    "year": "Année"
+    "year": "Année",
+    "diplomes": "Mes diplômes"
   },
   "en": {
     "presentation": "Presentation",
@@ -27,6 +28,7 @@
     "phone": "Phone number",
     "title": "Title",
     "send": "Send",
-    "year": "Year"
+    "year": "Year",
+    "diplomes": "My diplomas"
   }
 }

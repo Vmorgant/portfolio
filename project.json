@@ -50,6 +50,40 @@
         "type": "School project",
         "status": "Finished"
       }
+    },
+    {
+      "name": "Play4Fun",
+      "img": "img/play4fun.png",
+      "year": 2019,
+      "techno": "ionic, phaser",
+      "links": "https://github.com/Vmorgant/Play4Fun",
+      "fr": {
+        "description": "Ce jeu réalisé à l'aide du framework ionic et du plugin phaser m'a permis de m'améliorer dans le développement mobile, une première version à été réalisée et présentée lors d'unr soutenance. L'application sera prochainement améliorée et déployée sur le play store.",
+        "type": "Projet scolaire",
+        "status": "En pause"
+      },
+      "en": {
+        "description": "This game made using the ionic framework and phaser plugin allowed me to improve in mobile development, a first version was made and presented during a defense. The application will then be improved and deployed on the play store ",
+        "type": "School project",
+        "status": "Paused"
+      }
+    },
+    {
+      "name": "MediaSuggest",
+      "img": "img/mediaSuggest.png",
+      "year": 2019,
+      "techno": "ionic",
+      "links": "https://github.com/Vmorgant/MediaSuggest",
+      "fr": {
+        "description": "Cette application permet à l'utilisateur de consulter une liste de série tv qu'il pourrait aimer et de les sauvegarder dans une liste.",
+        "type": "Projet personnel",
+        "status": "En cours"
+      },
+      "en": {
+        "description": "This application allows the user to view a list of tv series he might like and save them in a list.",
+        "type": "School personnel",
+        "status": "In progress"
+      }
     }
   ]
 }
