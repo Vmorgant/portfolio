@@ -1,52 +1,35 @@
 {
   "projects": [
     {
-      "name": "La Guerre Du Graal",
-      "img": "img/lgdg.png",
-      "year": 2016,
+      "name": "Tactics Arena",
+      "img": "",
+      "year": 2015,
       "techno": "C, SDL",
-      "links": "https://github.com/Vmorgant/La_Guerre_Du_Graal",
+      "links": "",
       "fr": {
-        "description": "Ce jeu a été réalisé dans le cadre du projet d’algorithmique de deuxième année de licence SPI. \nDans ce jeu similaire à un jeu d'échec chaque joueur contrôle une équipe de combattants et doit éliminer l'autre équipe. Une version dotée d'une interface graphique est en cours de développement. ",
+        "description": "toto",
         "type": "Projet scolaire",
         "status": "Terminé"
       },
       "en": {
-        "description": "This game was realized during the project of algorithmic of second year of license SPI. \nIn this game similar to a chess game each player controls a team of fighters and must eliminate the other team. A version with a graphical interface is being developed. ",
+        "description": "tutu",
         "type": "School project",
         "status": "Finished"
       }
     },
     {
       "name": "BDLC",
-      "img": "img/bdlc.jpg",
-      "year": 2018,
-      "techno": "HTML, CSS, php, javascript",
-      "links": "https://github.com/Vmorgant/Plateforme_Web_BDLC",
+      "img": "",
+      "year": 2015,
+      "techno": "C, SDL",
+      "links": "",
       "fr": {
-        "description": "Cette plateforme a été réalisé dans le cadre du Projet interdisciplinaire de troisième année à l'Ensim. \nUne application Android permettait de commander à la cafétéria de l'école et de suivre les actualités des associations. Pour que tous les étudiants puissent bénéficier de cette application nous avons du réaliser une plateforme web reprenant le design et les fonctionnalités de l'application. ",
+        "description": "toto",
         "type": "Projet scolaire",
         "status": "Terminé"
       },
       "en": {
-        "description": "This platform was realized as part of the Interdisciplinary Project of the third year at Ensim. \nAn Android application made it possible to order at the school cafeteria and follow the news of the associations. For all students to benefit from this application we had to realize a web platform with the design and functionality of the application. ",
-        "type": "School project",
-        "status": "Finished"
-      }
-    },
-    {
-      "name": "Life Long Learning",
-      "img": "img/LLL.png",
-      "year": 2019,
-      "techno": "python, pytorch, deep learning",
-      "links": "https://github.com/amacz13/LLL_Sincnet2phonemes",
-      "fr": {
-        "description": " Dans le cadre de mon projet j'ai de 4ème année nous avons travaillé sur des méthodes d'amélioration de la pertinence des réseaux de neurone à travers le temps. En tant que chef de projet mon rôle j'étais responsavble de la coordination de l'équipe et de la validation des différents livrables.",
-        "type": "Projet scolaire",
-        "status": "Terminé"
-      },
-      "en": {
-        "description": "As part of my 4th year project we have been working on methods to improve the relevance of neural networks over time. As project manager, I was responsible for coordinating the team and validating the various deliverables. ",
+        "description": "toto",
         "type": "School project",
         "status": "Finished"
       }
