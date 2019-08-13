@@ -45,11 +45,11 @@
         "type": "Projet scolaire",
         "status": "Terminé"
       },
-    "en": {
-      "description": "As part of my 4th year project we have been working on methods to improve the relevance of neural networks over time. As project manager, I was responsible for coordinating the team and validating the various deliverables. ",
-      "type": "School project",
-      "status": "Finished"
-    }	      }
+      "en": {
+        "description": "As part of my 4th year project we have been working on methods to improve the relevance of neural networks over time. As project manager, I was responsible for coordinating the team and validating the various deliverables. ",
+        "type": "School project",
+        "status": "Finished"
+      }
     },
     {
       "name": "Play4Fun",

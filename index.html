@@ -59,7 +59,6 @@
                 .then(response => response.json()).then(projects => {
                     for (project in projects.projects) {
                         let newContent = generateCard(projects.projects[project], lang);
-                        console.log(newContent);
                         let newNode = document.createElement("div");
                         newNode.className="col s4 ";
                         newNode.innerHTML = newContent;
