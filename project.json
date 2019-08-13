@@ -35,6 +35,23 @@
       }
     },
     {
+      "name": "Life Long Learning",
+      "img": "img/LLL.png",
+      "year": 2019,
+      "techno": "python, pytorch, deep learning",
+      "links": "https://github.com/amacz13/LLL_Sincnet2phonemes",
+      "fr": {
+        "description": " Dans le cadre de mon projet j'ai de 4ème année nous avons travaillé sur des méthodes d'amélioration de la pertinence des réseaux de neurone à travers le temps. En tant que chef de projet mon rôle j'étais responsavble de la coordination de l'équipe et de la validation des différents livrables.",
+        "type": "Projet scolaire",
+        "status": "Terminé"
+      },
+    "en": {
+      "description": "As part of my 4th year project we have been working on methods to improve the relevance of neural networks over time. As project manager, I was responsible for coordinating the team and validating the various deliverables. ",
+      "type": "School project",
+      "status": "Finished"
+    }	      }
+    },
+    {
       "name": "Play4Fun",
       "img": "img/play4fun.png",
       "year": 2019,
