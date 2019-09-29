@@ -7,17 +7,17 @@
   </component>
   <component name="PhpInterpreters">
     <interpreters>
-      <interpreter id="7f0b25db-4d1c-4f40-a905-e34e55107968" name="PHP" home="C:\xampp\php\php.exe" debugger_id="php.debugger.XDebug" />
+      <interpreter id="7f0b25db-4d1c-4f40-a905-e34e55107968" name="PHP" home="C:\wamp64\bin\php\php7.3.5\php.exe" debugger_id="php.debugger.XDebug" />
     </interpreters>
   </component>
   <component name="PhpInterpretersPhpInfoCache">
     <phpInfoCache>
       <interpreter name="PHP">
-        <phpinfo binary_type="PHP" php_cgi="C:\xampp\php\php-cgi.exe" php_cli="C:\xampp\php\php.exe" path_separator=";" version="7.3.7">
+        <phpinfo binary_type="PHP" php_cgi="C:\wamp64\bin\php\php7.3.5\php-cgi.exe" php_cli="C:\wamp64\bin\php\php7.3.5\php.exe" path_separator=";" version="7.3.5">
           <additional_php_ini />
-          <configuration_file>C:\xampp\php\php.ini</configuration_file>
+          <configuration_file>C:\wamp64\bin\php\php7.3.5\php.ini</configuration_file>
           <configuration_options>
-            <configuration_option name="include_path" value="C:\xampp\php\PEAR" />
+            <configuration_option name="include_path" value=".;C:\php\pear" />
           </configuration_options>
           <debuggers />
           <loaded_extensions>
@@ -37,12 +37,15 @@
             <extension name="exif" />
             <extension name="fileinfo" />
             <extension name="filter" />
-            <extension name="ftp" />
             <extension name="gd" />
             <extension name="gettext" />
+            <extension name="gmp" />
             <extension name="hash" />
             <extension name="iconv" />
+            <extension name="imap" />
+            <extension name="intl" />
             <extension name="json" />
+            <extension name="ldap" />
             <extension name="libxml" />
             <extension name="mbstring" />
             <extension name="mysqli" />
@@ -53,12 +56,16 @@
             <extension name="pdo_sqlite" />
             <extension name="readline" />
             <extension name="session" />
+            <extension name="soap" />
+            <extension name="sockets" />
             <extension name="standard" />
             <extension name="tokenizer" />
             <extension name="wddx" />
             <extension name="xml" />
             <extension name="xmlreader" />
+            <extension name="xmlrpc" />
             <extension name="xmlwriter" />
+            <extension name="xsl" />
             <extension name="zip" />
             <extension name="zlib" />
           </loaded_extensions>
